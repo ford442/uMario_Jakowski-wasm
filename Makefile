@@ -1,3 +1,11 @@
+emsc:
+	 em++ uNext/*.cpp -O2 -o umario001.js -sFORCE_FILESYSTEM=1 -sENVIRONMENT=web \
+	 -sALLOW_MEMORY_GROWTH=0 -sINITIAL_MEMORY=1400mb \
+	 -sUSE_WEBGL2=1 -sMIN_WEBGL_VERSION=2 -sMAX_WEBGL_VERSION=2 \
+	 -sUSE_SDL=2 -sUSE_SDL_MIXER=2 -sUSE_SDL_IMAGE=2 -sFULL_ES3=1 -sFULL_ES2=1 \
+	 --closure 1 -g2 -flto=thin -std=gnu++11 \
+         -sEXPORTED_FUNCTIONS='["_main"]' -sEXPORTED_RUNTIME_METHODS='["ccall"]' 
+
 all: build
 
 mkdir_build:
